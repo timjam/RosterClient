@@ -1,0 +1,13 @@
+.SignUp {
+  margin: 10px;
+  padding: 10px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.SignUp-formContainer {
+  margin: 10px;
+  padding: 10px;
+  flex-grow: column;
+}
