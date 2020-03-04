@@ -11,7 +11,7 @@ const ProtectedContent = ({ component: Component, ...rest }) => {
       } else {
         return (
           <Redirect to={{
-            pathname: '/signin',
+            pathname: '/auth/signin',
             state: { from: props.location },
           }} />
         );
