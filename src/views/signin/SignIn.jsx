@@ -6,14 +6,18 @@ import {
 import SignInForm from './SignInForm';
 import Auth from '../../services/Auth';
 import './SignIn.css';
-import { Redirect } from 'react-router-dom';
+import {
+  Redirect,
+  useLocation,
+} from 'react-router-dom';
 
 const SignIn = (props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [redirectToReferrer, setRedirectToReferrer] = useState(false);
+  let location = useLocation();
 
-  const { from } = props.location || { from: { pathname: '/' } };
+  const { from } = location.state || { from: { pathname: '/' } };
 
   const signUp = () => {
     console.log('Sign up dude');
